@@ -32,6 +32,7 @@ public class UserController {
     public List<User> listUser(){
         return userService.getAllUsers();
     }
+
     @PostMapping(value = "/users/register", produces={MediaType.APPLICATION_JSON_VALUE, MediaType.TEXT_PLAIN_VALUE})
     public ResponseEntity<User> create(@Valid @RequestBody UserDTO userDTO) {
         User user = userService.createUser(userDTO);

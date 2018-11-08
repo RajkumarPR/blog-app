@@ -40,17 +40,6 @@ import java.util.Arrays;
 @PropertySource({ "classpath:application.properties" })
 public class OAuth2AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
 
-    static final String CLIEN_ID = "devglan-client";
-    static final String CLIENT_SECRET = "devglan-secret";
-    static final String GRANT_TYPE_PASSWORD = "password";
-    static final String AUTHORIZATION_CODE = "authorization_code";
-    static final String REFRESH_TOKEN = "refresh_token";
-    static final String IMPLICIT = "implicit";
-    static final String SCOPE_READ = "read";
-    static final String SCOPE_WRITE = "write";
-    static final String TRUST = "trust";
-    static final int ACCESS_TOKEN_VALIDITY_SECONDS = 1*60*60;
-    static final int FREFRESH_TOKEN_VALIDITY_SECONDS = 6*60*60;
 
     @Value("classpath:schema.sql")
     private Resource schemaScript;
